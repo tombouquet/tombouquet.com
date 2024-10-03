@@ -44,7 +44,13 @@ const App = () => {
             </h2>
             <p className="mt-4">
               I am a button presser who wants to make an impression on live
-              video content.
+              video content. My passion lies in blending technology and
+              creativity to craft engaging experiences that resonate with
+              viewers. Whether it's experimenting with interactive elements or
+              optimizing streams for maximum impact, I thrive on pushing the
+              boundaries of what’s possible in live video. My goal is to create
+              not just content, but memorable moments that captivate and connect
+              with audiences in real time.
             </p>
           </div>
           <div className="flex gap-4 justify-center md:justify-start">
