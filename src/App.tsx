@@ -36,9 +36,9 @@ const App = () => {
   return (
     <>
       <div className="absolute font-pulp inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] animate-pulse" />
-      <div className="p-10 md:pb-64 md:container md:flex space-y-6 items-center gap-16 h-screen justify-center">
+      <div className="p-10 md:pb-64 md:container md:flex space-y-10 items-center gap-16 h-screen justify-center">
         {/* Container for the image or Blurhash */}
-        <div className="relative shrink-0 size-52 md:w-64 md:h-64 order-last drop-shadow-xl mx-auto">
+        <div className="relative shrink-0 size-64 order-last drop-shadow-xl mx-auto">
           {/* Display Blurhash while image is loading */}
           {!imageLoaded && (
             <BlurhashCanvas
