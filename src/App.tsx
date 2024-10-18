@@ -4,8 +4,15 @@ import tomHeadshot from "./assets/Tom-Headshot-Square.jpg";
 import githubIcon from "./assets/github.svg";
 import discordIcon from "./assets/discord.svg";
 import mailIcon from "./assets/mail.svg";
+import linkedInIcon from "./assets/linkedin.svg";
 
 const socials = [
+  {
+    name: "LinkedIn",
+    icon: linkedInIcon,
+    alt: "LinkedIn icon",
+    href: "https://www.linkedin.com/in/tom-bouquet/",
+  },
   {
     name: "Github",
     icon: githubIcon,
