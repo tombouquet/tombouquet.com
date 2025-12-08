@@ -74,14 +74,16 @@ const App = () => {
               Tom Bouquet
             </h1>
             <h2 className="font-bold text-lg mt-2">
-              Web Developer & Live Video Enthusiast
+              Associate Consultant Developer at Pipelabs
             </h2>
             <p className="mt-4">
-              My passion lies in blending technology and creativity to craft
-              engaging experiences that resonate with viewers. Whether it's
-              experimenting with interactive elements or optimizing streams for
-              maximum impact, I thrive on pushing the boundaries of what’s
-              possible in live video.
+              I work as an Associate Consultant Developer at Pipelabs, a Shopify
+              agency specializing in solving complex e-commerce challenges. I
+              focus on integrating external ERP solutions with Shopify, helping
+              clients streamline their operations and scale their businesses. I
+              combine technical expertise and creative problem-solving to build
+              innovative solutions and engaging digital experiences that drive
+              meaningful business growth.
             </p>
           </div>
           <div className="flex gap-4 justify-center md:justify-start">
