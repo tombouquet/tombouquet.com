@@ -2,7 +2,6 @@ import { BlurhashCanvas } from "react-blurhash";
 import { useState } from "react";
 import tomHeadshot from "./assets/Tom-Headshot-Square.jpg";
 import githubIcon from "./assets/github.svg";
-import discordIcon from "./assets/discord.svg";
 import mailIcon from "./assets/mail.svg";
 import linkedInIcon from "./assets/linkedin.svg";
 
@@ -18,12 +17,6 @@ const socials = [
     icon: githubIcon,
     alt: "Github icon",
     href: "https://github.com/tombouquet",
-  },
-  {
-    name: "Discord",
-    icon: discordIcon,
-    alt: "Discord icon",
-    href: "https://discord.gg/vhVTfVGXmW",
   },
   {
     name: "Email",
@@ -77,13 +70,9 @@ const App = () => {
               Associate Consultant Developer at Pipelabs
             </h2>
             <p className="mt-4">
-              I work as an Associate Consultant Developer at Pipelabs, a Shopify
-              agency specializing in solving complex e-commerce challenges. I
-              focus on integrating external ERP solutions with Shopify, helping
-              clients streamline their operations and scale their businesses. I
-              combine technical expertise and creative problem-solving to build
-              innovative solutions and engaging digital experiences that drive
-              meaningful business growth.
+              I'm an Associate Consultant Developer at Pipelabs, a Shopify
+              agency, where I integrate ERP systems with Shopify to help clients
+              streamline operations and scale their businesses.
             </p>
           </div>
           <div className="flex gap-4 justify-center md:justify-start">
