@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "blurhash": "^2.0.5",
-    "lucide-react": "^0.446.0",
+    "lucide-react": "^0.577.0",
     "react": "^19.2.1",
     "react-blurhash": "^0.3.0",
     "react-dom": "^19.2.1"
