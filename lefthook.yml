@@ -1,0 +1,20 @@
+pre-commit:
+  piped: true
+  jobs:
+    - name: oxlint --fix
+      glob: '*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'
+      run: bunx oxlint --fix --no-error-on-unmatched-pattern {staged_files}
+      stage_fixed: true
+    - name: oxfmt
+      glob: '*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,json,jsonc,md,css,yml,yaml,toml,html}'
+      run: bunx oxfmt --no-error-on-unmatched-pattern {staged_files}
+      stage_fixed: true
+    - name: format-codemod
+      glob: '*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'
+      run: bunx format-codemod --quiet {staged_files}
+      stage_fixed: true
+
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: bunx commitlint --edit {1}

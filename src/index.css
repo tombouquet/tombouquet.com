@@ -1,244 +1,255 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 960px;
+  --font-pulp:
+    'Pulp Display', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@utility container {
+  margin-inline: auto;
+}
 
 @layer base {
   @font-face {
-    font-family: "Pulp Display";
-    src: url("./fonts/Pulp Display/PulpDisplay-MediumItalic.eot");
-    src: local("Pulp Display Medium Italic"), local("PulpDisplay-MediumItalic"),
-      url("./fonts/Pulp Display/PulpDisplay-MediumItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-MediumItalic.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-MediumItalic.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-MediumItalic.ttf")
-        format("truetype");
+    font-family: 'Pulp Display';
+    src: url('./fonts/Pulp Display/PulpDisplay-MediumItalic.eot');
+    src:
+      local('Pulp Display Medium Italic'),
+      local('PulpDisplay-MediumItalic'),
+      url('./fonts/Pulp Display/PulpDisplay-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-MediumItalic.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-MediumItalic.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-MediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display";
-    src: url("./fonts/Pulp Display/PulpDisplay-Bold.eot");
-    src: local("Pulp Display Bold"), local("PulpDisplay-Bold"),
-      url("./fonts/Pulp Display/PulpDisplay-Bold.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-Bold.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-Bold.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-Bold.ttf") format("truetype");
+    font-family: 'Pulp Display';
+    src: url('./fonts/Pulp Display/PulpDisplay-Bold.eot');
+    src:
+      local('Pulp Display Bold'),
+      local('PulpDisplay-Bold'),
+      url('./fonts/Pulp Display/PulpDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-Bold.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-Bold.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display";
-    src: url("./fonts/Pulp Display/PulpDisplay-BoldItalic.eot");
-    src: local("Pulp Display Bold Italic"), local("PulpDisplay-BoldItalic"),
-      url("./fonts/Pulp Display/PulpDisplay-BoldItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-BoldItalic.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-BoldItalic.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-BoldItalic.ttf") format("truetype");
+    font-family: 'Pulp Display';
+    src: url('./fonts/Pulp Display/PulpDisplay-BoldItalic.eot');
+    src:
+      local('Pulp Display Bold Italic'),
+      local('PulpDisplay-BoldItalic'),
+      url('./fonts/Pulp Display/PulpDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-BoldItalic.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-BoldItalic.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-BoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display Extra";
-    src: url("./fonts/Pulp Display/PulpDisplay-ExtraBold.eot");
-    src: local("Pulp Display Extra Bold"), local("PulpDisplay-ExtraBold"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraBold.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraBold.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraBold.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraBold.ttf") format("truetype");
+    font-family: 'Pulp Display Extra';
+    src: url('./fonts/Pulp Display/PulpDisplay-ExtraBold.eot');
+    src:
+      local('Pulp Display Extra Bold'),
+      local('PulpDisplay-ExtraBold'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraBold.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraBold.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display";
-    src: url("./fonts/Pulp Display/PulpDisplay-Light.eot");
-    src: local("Pulp Display Light"), local("PulpDisplay-Light"),
-      url("./fonts/Pulp Display/PulpDisplay-Light.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-Light.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-Light.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-Light.ttf") format("truetype");
+    font-family: 'Pulp Display';
+    src: url('./fonts/Pulp Display/PulpDisplay-Light.eot');
+    src:
+      local('Pulp Display Light'),
+      local('PulpDisplay-Light'),
+      url('./fonts/Pulp Display/PulpDisplay-Light.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-Light.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-Light.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display";
-    src: url("./fonts/Pulp Display/PulpDisplay-Medium.eot");
-    src: local("Pulp Display Medium"), local("PulpDisplay-Medium"),
-      url("./fonts/Pulp Display/PulpDisplay-Medium.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-Medium.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-Medium.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-Medium.ttf") format("truetype");
+    font-family: 'Pulp Display';
+    src: url('./fonts/Pulp Display/PulpDisplay-Medium.eot');
+    src:
+      local('Pulp Display Medium'),
+      local('PulpDisplay-Medium'),
+      url('./fonts/Pulp Display/PulpDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-Medium.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-Medium.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display Extra";
-    src: url("./fonts/Pulp Display/PulpDisplay-ExtraLight.eot");
-    src: local("Pulp Display Extra Light"), local("PulpDisplay-ExtraLight"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraLight.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraLight.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraLight.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraLight.ttf") format("truetype");
+    font-family: 'Pulp Display Extra';
+    src: url('./fonts/Pulp Display/PulpDisplay-ExtraLight.eot');
+    src:
+      local('Pulp Display Extra Light'),
+      local('PulpDisplay-ExtraLight'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraLight.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraLight.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display Extra";
-    src: url("./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.eot");
-    src: local("Pulp Display Extra Bold Italic"),
-      local("PulpDisplay-ExtraBoldItalic"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.woff2")
-        format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.woff")
-        format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.ttf")
-        format("truetype");
+    font-family: 'Pulp Display Extra';
+    src: url('./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.eot');
+    src:
+      local('Pulp Display Extra Bold Italic'),
+      local('PulpDisplay-ExtraBoldItalic'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraBoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display";
-    src: url("./fonts/Pulp Display/PulpDisplay-RegularItalic.eot");
-    src: local("Pulp Display Italic"), local("PulpDisplay-RegularItalic"),
-      url("./fonts/Pulp Display/PulpDisplay-RegularItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-RegularItalic.woff2")
-        format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-RegularItalic.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-RegularItalic.ttf")
-        format("truetype");
+    font-family: 'Pulp Display';
+    src: url('./fonts/Pulp Display/PulpDisplay-RegularItalic.eot');
+    src:
+      local('Pulp Display Italic'),
+      local('PulpDisplay-RegularItalic'),
+      url('./fonts/Pulp Display/PulpDisplay-RegularItalic.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-RegularItalic.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-RegularItalic.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-RegularItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display Extra";
-    src: url("./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.eot");
-    src: local("Pulp Display Extra Light Italic"),
-      local("PulpDisplay-ExtraLightItalic"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.woff2")
-        format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.woff")
-        format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.ttf")
-        format("truetype");
+    font-family: 'Pulp Display Extra';
+    src: url('./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.eot');
+    src:
+      local('Pulp Display Extra Light Italic'),
+      local('PulpDisplay-ExtraLightItalic'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.eot?#iefix')
+        format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-ExtraLightItalic.ttf') format('truetype');
     font-weight: 200;
     font-style: italic;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display";
-    src: url("./fonts/Pulp Display/PulpDisplay-LightItalic.eot");
-    src: local("Pulp Display Light Italic"), local("PulpDisplay-LightItalic"),
-      url("./fonts/Pulp Display/PulpDisplay-LightItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-LightItalic.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-LightItalic.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-LightItalic.ttf") format("truetype");
+    font-family: 'Pulp Display';
+    src: url('./fonts/Pulp Display/PulpDisplay-LightItalic.eot');
+    src:
+      local('Pulp Display Light Italic'),
+      local('PulpDisplay-LightItalic'),
+      url('./fonts/Pulp Display/PulpDisplay-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-LightItalic.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-LightItalic.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-LightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display";
-    src: url("./fonts/Pulp Display/PulpDisplay-Regular.eot");
-    src: local("Pulp Display"), local("PulpDisplay-Regular"),
-      url("./fonts/Pulp Display/PulpDisplay-Regular.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-Regular.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-Regular.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-Regular.ttf") format("truetype");
+    font-family: 'Pulp Display';
+    src: url('./fonts/Pulp Display/PulpDisplay-Regular.eot');
+    src:
+      local('Pulp Display'),
+      local('PulpDisplay-Regular'),
+      url('./fonts/Pulp Display/PulpDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-Regular.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-Regular.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display Semi";
-    src: url("./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.eot");
-    src: local("Pulp Display Semi Bold Italic"),
-      local("PulpDisplay-SemiBoldItalic"),
-      url("./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.woff2")
-        format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.ttf")
-        format("truetype");
+    font-family: 'Pulp Display Semi';
+    src: url('./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.eot');
+    src:
+      local('Pulp Display Semi Bold Italic'),
+      local('PulpDisplay-SemiBoldItalic'),
+      url('./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-SemiBoldItalic.ttf') format('truetype');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display Outline";
-    src: url("./fonts/Pulp Display/PulpDisplay-Outline.eot");
-    src: local("Pulp Display Outline"), local("PulpDisplay-Outline"),
-      url("./fonts/Pulp Display/PulpDisplay-Outline.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-Outline.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-Outline.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-Outline.ttf") format("truetype");
+    font-family: 'Pulp Display Outline';
+    src: url('./fonts/Pulp Display/PulpDisplay-Outline.eot');
+    src:
+      local('Pulp Display Outline'),
+      local('PulpDisplay-Outline'),
+      url('./fonts/Pulp Display/PulpDisplay-Outline.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-Outline.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-Outline.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-Outline.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display Outline";
-    src: url("./fonts/Pulp Display/PulpDisplay-OutlineItalic.eot");
-    src: local("Pulp Display Outline Italic"),
-      local("PulpDisplay-OutlineItalic"),
-      url("./fonts/Pulp Display/PulpDisplay-OutlineItalic.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-OutlineItalic.woff2")
-        format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-OutlineItalic.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-OutlineItalic.ttf")
-        format("truetype");
+    font-family: 'Pulp Display Outline';
+    src: url('./fonts/Pulp Display/PulpDisplay-OutlineItalic.eot');
+    src:
+      local('Pulp Display Outline Italic'),
+      local('PulpDisplay-OutlineItalic'),
+      url('./fonts/Pulp Display/PulpDisplay-OutlineItalic.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-OutlineItalic.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-OutlineItalic.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-OutlineItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Pulp Display Semi";
-    src: url("./fonts/Pulp Display/PulpDisplay-SemiBold.eot");
-    src: local("Pulp Display Semi Bold"), local("PulpDisplay-SemiBold"),
-      url("./fonts/Pulp Display/PulpDisplay-SemiBold.eot?#iefix")
-        format("embedded-opentype"),
-      url("./fonts/Pulp Display/PulpDisplay-SemiBold.woff2") format("woff2"),
-      url("./fonts/Pulp Display/PulpDisplay-SemiBold.woff") format("woff"),
-      url("./fonts/Pulp Display/PulpDisplay-SemiBold.ttf") format("truetype");
+    font-family: 'Pulp Display Semi';
+    src: url('./fonts/Pulp Display/PulpDisplay-SemiBold.eot');
+    src:
+      local('Pulp Display Semi Bold'),
+      local('PulpDisplay-SemiBold'),
+      url('./fonts/Pulp Display/PulpDisplay-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Pulp Display/PulpDisplay-SemiBold.woff2') format('woff2'),
+      url('./fonts/Pulp Display/PulpDisplay-SemiBold.woff') format('woff'),
+      url('./fonts/Pulp Display/PulpDisplay-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;

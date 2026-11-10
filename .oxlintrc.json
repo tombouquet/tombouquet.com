@@ -1,0 +1,32 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": ["./node_modules/@tombouquet/oxlint-config/oxlintrc.json"],
+  "env": { "browser": true },
+  "ignorePatterns": ["**/node_modules/**", "**/dist/**"],
+  "rules": {
+    // the react-jsx runtime injects JSX imports, and tsc rejects an unread React binding
+    "react/react-in-jsx-scope": "off",
+    // Vite bundles stylesheets through side-effect imports; jest-dom registers matchers on import
+    "import/no-unassigned-import": [
+      "error",
+      {
+        "allow": [
+          "jest-extended",
+          "**/augment-bun-test.ts",
+          "**/*.css",
+          "@testing-library/jest-dom/vitest"
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      // Vitest names each mock file after the module it replaces, and every test runs it
+      "files": ["__mocks__/**"],
+      "rules": {
+        "tombouquet/export-names-file-concept": "off",
+        "tombouquet/require-colocated-test": "off"
+      }
+    }
+  ]
+}
